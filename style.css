@@ -1,0 +1,68 @@
+@-webkit-keyframes prelude {
+    from{opacity: 0;}
+    20%{opacity: 1;}
+    80%{opacity: 1;}
+    to{opacity: 0;}
+}
+@-webkit-keyframes introContent {
+    from{opacity: 1; -webkit-transform: rotateX(80deg) scaleY(0.1) translateY(800px);}
+    50%{opacity: 1;}
+    60%{opacity: 0;}
+    to{-webkit-transform: rotateX(80deg) scaleY(0.1) translateY(-1500px);}
+}
+body{
+    background: #000;
+    color: #fff;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+#canvas{
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+#intro{
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    color: #E7AE05;
+    -webkit-perspective: 60;
+    -webkit-perspective-origin: center 0;
+    letter-spacing: 1px;
+    text-align: justify;
+    text-shadow: 0 0 1px #E7AE05;
+}
+#introContent{
+    opacity: 0;
+    font-size: 30px;
+    line-height: 35px;
+    cursor: default;
+    width: 45%;
+    margin: 0 auto;
+    -webkit-transform: rotateX(80deg) scaleY(0.1);
+    -webkit-animation-name: introContent;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: 1;
+}
+h1, h2, h3, h4{
+    text-align: center;
+}
+audio{
+    display: none;
+}
+#prelude{
+    opacity: 0;
+    color: #1B7DEB;
+    text-align: center;
+    margin-top: 20%;
+    text-shadow: 0 0 1px #1B7DEB;
+    font-size: 20px;
+    -webkit-animation-name: prelude;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: 1;
+}
